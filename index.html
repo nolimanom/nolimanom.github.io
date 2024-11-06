@@ -24,7 +24,12 @@
 </head>
 <body>
 
-<iframe src="https://nolimanom.serv00.net/?nocache=" + new Date().getTime() scrolling="no"></iframe>
+<!-- Добавляем JavaScript для динамического обновления src iframe -->
+<script>
+    // Формируем URL с уникальной меткой времени
+    var iframeSrc = "https://nolimanom.serv00.net/?nocache=" + new Date().getTime();
+    document.write('<iframe src="' + iframeSrc + '" scrolling="no"></iframe>');
+</script>
 
 </body>
 </html>
