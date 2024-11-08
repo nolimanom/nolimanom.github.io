@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noli</title>
+    <style>
+        /* Убираем отступы и делаем body и html на 100% */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;  /* Отключаем прокрутку страницы */
+        }
 
+        /* Устанавливаем iframe на весь экран без прокрутки */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden; /* Отключаем прокрутку внутри iframe */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Добавляем JavaScript для динамического обновления src iframe -->
+<script>
+    // Формируем URL с уникальной меткой времени
+    var iframeSrc = "https://nolimanom.serv00.net/telegram.html/?nocache=" + new Date().getTime();
+    document.write('<iframe src="' + iframeSrc + '" scrolling="no"></iframe>');
+</script>
+
+</body>
+</html>
