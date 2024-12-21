@@ -1,9 +1,17 @@
 {
   "version": 2,
-  "name": "nolimanom.is-a-good.dev",
+  "name": "my-vercel-project",
   "builds": [
     {
       "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
       "use": "@vercel/static"
     }
   ],
@@ -11,15 +19,5 @@
     { "src": "/index", "dest": "/index.html" },
     { "src": "/bio", "dest": "/bio.html" },
     { "src": "/telegram", "dest": "/telegram.html" }
-  ],
-  "static": {
-    "headers": [
-      {
-        "source": "**/*.html",
-        "headers": [
-          { "key": "Cache-Control", "value": "max-age=0, must-revalidate" }
-        ]
-      }
-    ]
-  }
+  ]
 }
